@@ -11,7 +11,7 @@ RUN go mod download
 # Копируем исходный код
 COPY . .
 
-# Собираем приложение
+# Собираем приложение и создаем бинарник
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
 
 # Запускаем приложение
